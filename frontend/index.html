@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection Dashboard</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar for Stats -->
+        <div class="sidebar">
+            <h1>Road Guard AI</h1>
+            <div class="stats">
+                <p>Total Detections: <span id="total-count">0</span></p>
+                <p>Status: <span class="live-indicator">LIVE</span></p>
+            </div>
+            <button id="startBtn" class="start-button">START MONITORING</button>
+
+            <div id="log-container">
+                <h3>Recent Activity</h3>
+                <ul id="activity-log">
+                    <!-- New detections will appear here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- The Map Container -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

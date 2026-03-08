@@ -1,0 +1,78 @@
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; overflow: hidden;  }
+
+.container { 
+    display: flex; /* Makes sidebar and map sit side-by-side */
+    height: 100vh; 
+    width: 100vw;
+}
+/* This part keeps the list inside the box */
+#log-container {
+    height: 60vh; /* Limits the height to 60% of the screen */
+    overflow-y: auto; /* Adds a scrollbar when it gets full */
+    margin-top: 20px;
+    padding-right: 5px;
+}
+
+/* Make the scrollbar look thin and cool (Dark Mode style) */
+#log-container::-webkit-scrollbar {
+    width: 4px;
+}
+#log-container::-webkit-scrollbar-thumb {
+    background: #e94560; 
+    border-radius: 10px;
+}
+
+/* Add space between the cards so they don't touch */
+.detection-card {
+    background: #16213e;
+    margin-bottom: 15px; /* Space between cards */
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #e94560;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.sidebar {
+    width: 300px;
+    background: #1a1a2e;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.start-button {
+    background-color: #e94560; /* The same red you used for the cards */
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.start-button:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+/* Style for when the system is active */
+.btn-active {
+    background-color: #00ff00 !important;
+    color: #1a1a2e !important;
+    cursor: default;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.2);
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+} /* Map takes the rest of the space */
+
+.live-indicator { color: #00ff00; font-weight: bold; }
+
+#activity-log { list-style: none; padding: 0; font-size: 0.9rem; }
